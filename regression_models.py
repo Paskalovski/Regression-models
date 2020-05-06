@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split
 
 
 np.random.seed(0)
-n = 15
+n = 30
 x = np.linspace(0,10,n) + np.random.randn(n)/5
 y = np.sin(x)+x/6 + np.random.randn(n)/10
 
@@ -20,7 +20,7 @@ def part1_scatter():
     plt.scatter(X_test, y_test, label='test data')
     plt.legend(loc=4)
     plt.show()
-# part1_scatter()
+part1_scatter()
 
 ## polynomial LinearRegression on training data for degrees 1,3,6,9
 ## returns 100 predicted values over the interval x=0 to 10
@@ -54,7 +54,7 @@ def plot_one(degree_predictions):
     plt.ylim(-1,2.5)
     plt.legend(loc=4)
     plt.show()
-# plot_one(regression_deg4())
+plot_one(regression_deg4())
 
 
 ## regression score for the predicted models
@@ -90,7 +90,7 @@ def plot_regression_scores():
     plt.figure()
     plt.plot(degrees, R2_train,'b', degrees, R2_test, 'r')
     plt.show()
-# plot_regression_scores()
+plot_regression_scores()
 
 
 ##regression scores for a non-regularized LinearRegression model and a lasso regression model
